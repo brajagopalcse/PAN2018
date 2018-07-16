@@ -143,9 +143,9 @@ class Main:
                 image_cap_dict[i_d] = [0]*100
                 image_topic_dict[i_d] = [0]*100
 
-        if self.feature_reduction:
-            image_cap_dict = self.create_LSA_features(image_cap_dict, self.lsa4)
-            image_topic_dict = self.create_LSA_features(image_topic_dict, self.lsa5)
+        #if self.feature_reduction:
+        #    image_cap_dict = self.create_LSA_features(image_cap_dict, self.lsa4)
+        #    image_topic_dict = self.create_LSA_features(image_topic_dict, self.lsa5)
 
         for i_d in image_directory_dict:
             image_feature_dict[i_d] = image_cap_dict[i_d].tolist() + image_topic_dict[i_d].tolist()
