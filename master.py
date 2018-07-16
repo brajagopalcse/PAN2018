@@ -78,15 +78,16 @@ class Main:
         for i_d in features_dict:
             keys.append(i_d)
             features.append(features_dict[i_d])
+        lsa_vec = None
         if self.status_tt == 'training':
-            lsa_vec1 = lsa_model.fit_transform(features)
+            lsa_vec = lsa_model.fit_transform(features)
         elif self.status_tt == 'testing':
-            lsa_vec1 = lsa_model.transform(features)
+            lsa_vec = lsa_model.transform(features)
         else:
             print('The status is different ' + self.status_tt)
             sys.exit(1)
         new_features = {}
-        for i_d, f in zip(keys, lsa_vec1):
+        for i_d, f in zip(keys, lsa_vec):
             new_features[i_d] = f
         return new_features
 
@@ -114,10 +115,10 @@ class Main:
             text_topics = self.gensim_model.find_topics(final_tweet_lemmas)
             topic_vec_dict[i_d] = self.gensim_model.get_vecs(text_topics, text_topics, 100)
 
-        if self.feature_reduction:
-            normal_10_features_dict = self.create_LSA_features(normal_10_features_dict, self.lsa1)
-            word_vec_dict = self.create_LSA_features(word_vec_dict, self.lsa2)
-            topic_vec_dict = self.create_LSA_features(topic_vec_dict, self.lsa3)
+        #if self.feature_reduction: # if required
+        #    normal_10_features_dict = self.create_LSA_features(normal_10_features_dict, self.lsa1)
+        #    word_vec_dict = self.create_LSA_features(word_vec_dict, self.lsa2)
+        #    topic_vec_dict = self.create_LSA_features(topic_vec_dict, self.lsa3)
 
         hash_tag_dict = self.create_LSA_hash_features(hash_tag_dict)
 
