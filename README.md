@@ -10,24 +10,16 @@ Dataset:The dataset used for this experiments can be downloaded from the [PAN 20
 
 Other requirements:
 
-The GloVe models (100d & 200d) are required for word embeddings. 
+The [_GloVe_](https://nlp.stanford.edu/projects/glove/) models (_100d_ & _200d_) are required for word embeddings. 
 
-For image captioning, [image caption generation using chainer](https://github.com/apple2373/chainer-caption) was used. Need to extract image captions before using the above tool and store it in a csv file (format:imageid \t text).
+For image captioning, [image caption generation using chainer](https://github.com/apple2373/chainer-caption) was used. First, you need to generate image captions using the above tool and store it in a csv file (format:__imageid__*\t*__caption__) in resource folder.
 
 
 # Running the code
 
 *python master.py training_input_add test_input_add test_output_add*
 
-Output will be a xml file:
-
-  <author id="author-id"
-	  lang="en|es|ar"
-	  gender_txt="male|female"
-	  gender_img="male|female"
-	  gender_comb="male|female"
-  />
-
+Output will be a xml file as specified in this [link](https://pan.webis.de/clef18/pan18-web/author-profiling.html).
 
 # Reference
 
