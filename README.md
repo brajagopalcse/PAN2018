@@ -26,6 +26,6 @@ Output will be a xml file as specified in this [link](https://pan.webis.de/clef1
 
 Please cite the following paper if you find this code is useful.
 
-B. G. Patra, G. Das, and D. Das. 2018. Multimodal Author Profiling for Twitter - Notebook for PAN at CLEF 2018. In *Proceedings of the PAN 2018 at CLEF-2018*, Avignon, France. [link](https://pan.webis.de/clef18/pan18-web/proceedings.html)
+B. G. Patra, G. Das, and D. Das. 2018. Multimodal Author Profiling for Twitter - Notebook for PAN at CLEF 2018. In *Proceedings of the PAN 2018 at CLEF-2018*, Avignon, France. [link](http://ceur-ws.org/Vol-2125/paper_115.pdf)
 
 If you have any query please [e-mail](brajagopal.cse@gmail.com) us. We welcome bug fixes and new features.
